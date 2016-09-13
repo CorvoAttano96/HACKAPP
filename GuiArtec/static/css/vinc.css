@@ -1,0 +1,140 @@
+html,body{	
+	background: url("../imgs/back12-min.jpg") no-repeat center center fixed;
+	/*Ajusta mi background a la webpage*/
+	/*background-repeat:no-repeat;*/	
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size:cover;
+	/*background-position:;
+	Me Scrollea la imagen al desplazarze o en su defecto fixed, fijo
+	background-attachment:scroll;*/
+	color: white;
+}
+
+nav{
+	opacity: 0.9;
+}
+.josefin{
+	font-family: 'Josefin Sans', sans-serif;
+}
+.monserrat{
+	font-family: 'Montserrat', sans-serif;
+}
+.lato{
+	font-family: 'Lato', sans-serif;
+}
+
+#conten-contenido{
+	background-color: black;
+	opacity: 0.6;
+	
+}
+
+.mediano{
+	font-size: 4.5em;
+}
+.semi-chica{
+	font-size:3em; 
+}
+.chica{
+	font-size: 1.1em;
+}
+.justificar{
+	text-align: justify;
+	text-justify: inter-word;
+}
+.font-blanco{
+	color: white;
+}
+.gris{
+	color:silver;
+}
+
+.padding-conten{
+	margin-top: 25px;
+}
+.ancho{
+	width: 70%;
+}
+.quitar-float{
+	float:none;
+}
+
+/* Realiza el Espacio entre el mapa y mi contenedor de info*/
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px;
+
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+/*Finaliza el tratamiento con contenedor*/
+.no-lista li{
+	margin:0px;
+	padding: 0px;
+}
+.no-lista{
+	list-style-type: none;
+}
+
+.inline-block{
+	float: none;
+	display: inline-block;
+	padding-left:-4px; 
+}
+.padding-nav{
+	padding-right: 5px;
+}
+/*Esta Clase se redujo mas arriba con nav{}*/
+#claridad-nav{
+	background-color:black;
+	opacity: 0.6 
+}
+
+a{
+	font-style: italic;
+	color:darkgoldenrod;
+	text-decoration: none;
+}
+
+/* animated (nombre de animacion)*/
+/*-webkit-animation-delay:1s;-moz-animation-delay:1s;animation-delay:1s*/
+
+/* Responsive Map*/
+.responsive-map{
+	position: relative;
+	padding-bottom: 40%;
+	padding-top: 30px;
+	height: 500px;
+	max-width: 90%;
+	margin:0 auto 30px;
+}
+
+/* Button Custom Circule */
+.btn-circle-sm {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  line-height: 1.65;
+  border-radius: 30px;
+}
+
+.container-vinc{
+    position: relative; 
+ 	width: 450px;
+ 	height:370px;
+ 	left: 5px;
+ 	top: 30px;
+}

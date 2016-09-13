@@ -1,0 +1,192 @@
+img{
+	max-width:100%; /*Me permite determinar el resize de mi img*/
+	
+}
+a{
+	font-style: italic;
+	color:darkgoldenrod;
+	text-decoration: none;
+}
+html,body{	
+	background: url("../imgs/CountryLeather-min.jpg") no-repeat center center fixed;
+	/*Ajusta mi background a la webpage*/
+	/*background-repeat:no-repeat;*/	
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size:cover;
+	/*background-position:;
+	Me Scrollea la imagen al desplazarze o en su defecto fixed, fijo
+	background-attachment:scroll;*/
+	color: white;
+}
+
+.espacio-arriba{
+	margin-top:30px;
+}
+.margen-div-bt{
+	margin-top: 50px;
+}
+.margen-top-bt{
+	margin-top: 25px;
+}
+.josefin{
+	font-family: 'Josefin Sans', sans-serif;
+}
+.monserrat{
+	font-family: 'Montserrat', sans-serif;
+}
+.open-sans{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.luckiest{
+	font-family: 'Luckiest Guy', cursive;
+}
+.grande{
+	font-size: 6em;
+	}
+.mediano{
+	font-size: 2em;
+}
+.pequenio{
+	font-size: 1.5em;
+}
+
+.quitar-float{
+	float: none;  /*Me ubica dentro de los Layout de bootstrap*/
+}
+.margen-derecho{
+	margin-right: 2em;
+}
+
+}
+.inline-block{
+	float:none;
+	display: inline-block;
+	margin-right:-4px;	
+}
+.anda-arriba{
+	margin-top: 0px;  /*vertical-align sirve unicamente cuando esta definido en nuestra class en HTML inline-block*/
+}
+
+.padding-largo{
+	padding: 12px 23px;
+}
+
+.se-naranja{
+	background-color: #C46D3B;
+}
+.piel{
+	color:#E3CBAC ;
+}
+.negro{
+	color:000000;
+}
+.gris{
+	color:#60677A
+}
+.piel-claro{
+	color: #EFECD4;
+}
+.no-lista li{
+	list-style-type:none;
+}
+.no-lista{
+	margin:0;
+	padding: 0;
+}	
+
+.verde{
+	color:#86FF25;
+}	
+
+/* El boton del menu de la Home tipo1*/
+.btn-default {
+    color:#1A1917;
+    background-color:#E5D7C6;
+    opacity: 0.6;
+    /*background-color:#E3CBAC;*/
+    border-color: #E1C8A7;
+    padding: 10px 30px 5px 30px;
+    font-size: 18px; 
+    font-weight: bold; 
+}
+/* El boton del menu de la Home tipo2*/    
+.btn-default2 {
+    color:#1A1917;
+    background-color:#E1C8A7;
+    /*opacity: 0.6;*/
+    border-color: #E4B577;
+    padding: 10px 30px 5px 30px;
+    font-size: 18px; 
+    font-weight: bold; 
+}    
+.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+/* quita el subrayado el enlace ej: de la navbar*/
+
+a:link, a:visited{  			
+text-decoration:none;   
+} 
+nav.navbar {
+    background-color: #E3CBAC;
+}
+.btn-object{
+	background-image: url('../imgs/flechaD-btn.png');
+	background-repeat:no-repeat;
+	height:50px;
+	width:100px;
+	background-position:center;
+}
+
+.padding-nav{
+	padding-right: 5px;
+}
+#claridad-nav{
+	background-color:black;
+	opacity: 0.6 
+}
+#claridad-footer{
+	background-color:black;
+	opacity: 0.95;
+}
+
+/* Seccion del Footer*/
+html, body {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+body:after {
+    line-height: 100px; /* height of footer */
+    white-space: pre;
+    content: "\A";
+}
+
+footer {  
+    position: absolute;
+    width: 100%;
+    height: 100px; /* height of footer */
+    bottom: 0px;
+    margin-top: -100px; /* height of footer */
+}
+footer {
+    background-color: transparent;
+}
+/* Fin de Seccion de Footer*/
+
+/* Utilizo para toppear el titulo de Busqueda y otros*/
+.container-top{
+    margin-top:2em; 
+}
+/* Utilizo para toppear titulos Sendero del navbar, sino se pega*/
+.container-sendero{
+    margin-top: 50px;
+}

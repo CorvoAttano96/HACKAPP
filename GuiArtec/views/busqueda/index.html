@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Búsqueda</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/GuiArtec/static/css/bootstrap.min.css"><!--Aca importo la hojas de estilo de Bootstrap-->
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'> <!-- Fuente texto Josefin importante-->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'><!-- Fuente Contenido Monserrat -->
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'><!-- Fuente de Contenido Alternativo Lato -->
+  <link rel="stylesheet" href="/GuiArtec/static/css/footer.css"><!-- Aca importo la hoja de estilos que utilizo en el footer-->
+  <link rel="stylesheet" href="/GuiArtec/static/css/search.css"><!-- Aca importo la hoja de estilos que utilizo en view Busqueda -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> <!--Aca importo el js de JQuery me facilita trabajar con librerias JS-->
+  <script src="/GuiArtec/static/js/bootstrap.min.js" type="text/javascript"></script> <!-- Aca importo un JS de Bootstrap para obtener func. "dinamismo"--> 
+  <link rel="stylesheet" type="text/css" href="/GuiArtec/static/css/sharing.css"><!--Hoja para Compartir en redes-->
+  <!--Aca sigue el script que ejecuta las busquedas!-->
+  
+  <script language="javascript">
+
+    
+    //Busco en todas las tablas. Puede que pongamos esta busqueda como la unica.. 
+    function doSearch0(){
+      var tableReg = document.getElementById('museums');
+      var tableReg1 = document.getElementById('points');
+      var searchText = document.getElementById('searchTerm').value.toLowerCase();
+      var cellsOfRow="";
+      var found=false;
+      var compareWith="";
+ 
+      //Bloque de busqueda por la primer tabla!
+
+      // Recorremos todas las filas con contenido de la tabla
+      for (var i = 1; i < tableReg.rows.length; i++)
+      {
+        cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+        found = false;
+        // Recorremos todas las celdas
+        for (var j = 0; j < cellsOfRow.length && !found; j++)
+        {
+          compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+          // Buscamos el texto en el contenido de la celda
+          if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+          {
+            found = true;
+          }
+        }
+        if(found)
+        {
+          tableReg.rows[i].style.display = '';
+        } else {
+          // si no ha encontrado ninguna coincidencia, esconde la
+          // fila de la tabla
+          tableReg.rows[i].style.display = 'none';
+        }
+      }
+
+      var cellsOfRow="";
+      var found=false;
+      var compareWith="";
+
+      //Bloque de busqueda por la segunda tabla!
+      
+      // Recorremos todas las filas con contenido de la tabla
+      for (var i = 1; i < tableReg1.rows.length; i++)
+      {
+        cellsOfRow = tableReg1.rows[i].getElementsByTagName('td');
+        found = false;
+        // Recorremos todas las celdas
+        for (var j = 0; j < cellsOfRow.length && !found; j++)
+        {
+          compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+          // Buscamos el texto en el contenido de la celda
+          if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+          {
+            found = true;
+          }
+        }
+        if(found)
+        {
+          tableReg1.rows[i].style.display = '';
+        } else {
+          // si no ha encontrado ninguna coincidencia, esconde la
+          // fila de la tabla
+          tableReg1.rows[i].style.display = 'none';
+        }
+      }
+
+    }
+
+
+    //Busco en la primer tabla
+    function doSearch()
+    {
+      var tableReg = document.getElementById('museums');
+      var searchText = document.getElementById('searchMuseum').value.toLowerCase();
+      var cellsOfRow="";
+      var found=false;
+      var compareWith="";
+ 
+      // Recorremos todas las filas con contenido de la tabla
+      for (var i = 1; i < tableReg.rows.length; i++)
+      {
+        cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+        found = false;
+        // Recorremos todas las celdas
+        for (var j = 0; j < cellsOfRow.length && !found; j++)
+        {
+          compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+          // Buscamos el texto en el contenido de la celda
+          if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+          {
+            found = true;
+          }
+        }
+        if(found)
+        {
+          tableReg.rows[i].style.display = '';
+        } else {
+          // si no ha encontrado ninguna coincidencia, esconde la
+          // fila de la tabla
+          tableReg.rows[i].style.display = 'none';
+        }
+      }
+    }
+
+    //Busco en la segunda tabla
+    function doSearch1()
+    {
+      var tableReg = document.getElementById('points');
+      var searchText = document.getElementById('searchPoint').value.toLowerCase();
+      var cellsOfRow="";
+      var found=false;
+      var compareWith="";
+ 
+      // Recorremos todas las filas con contenido de la tabla
+      for (var i = 1; i < tableReg.rows.length; i++)
+      {
+        cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+        found = false;
+        // Recorremos todas las celdas
+        for (var j = 0; j < cellsOfRow.length && !found; j++)
+        {
+          compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+          // Buscamos el texto en el contenido de la celda
+          if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+          {
+            found = true;
+          }
+        }
+        if(found)
+        {
+          tableReg.rows[i].style.display = '';
+        } else {
+          // si no ha encontrado ninguna coincidencia, esconde la
+          // fila de la tabla
+          tableReg.rows[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav">
+        <img class="navbar-left" src="/GuiArtec/static/imgs/iconoguiarTec.png" width="30" height="30" style="margin-top:8px">
+        <a class="navbar-brand josefin" href="#" style="margin-left:1px;font-size:1.6em;"> GuiarTec</a>            
+      </div>  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">          
+          <li class="josefin"><a href="../default/index-html">Inicio</a></li>
+          <li  class="dropdown">
+            <a class="dropdown-toggle josefin" data-toggle="dropdown" href="#">Recorridos Dinamicos<span class="caret"></span></a>
+              <ul class="dropdown-menu monserrat">
+                <li><a href="/GuiArtec/senderoEsculturas/index.html"><span class="glyphicon glyphicon-tower"></span> Senderos-Esculturas</a></li>
+                <li><a href="/GuiArtec/senderoMuseos/index.html"><span class="glyphicon glyphicon-home"></span> Museos</a></li>
+                <li><a href="/GuiArtec/senderoPuntos/index.html"><span class="glyphicon glyphicon-map-marker"></span> Lugar de Interes</a></li>
+             </ul>            
+      </li>
+      <li class="dropdown">
+            <a class="dropdown-toggle josefin" data-toggle="dropdown" href="#">Acerca de<span class="caret"></span></a>
+            <ul class="dropdown-menu monserrat">              
+              <li><a href="/GuiArtec/appsvinc/index.html">Apps Vinculadas</a></li>
+              <li><a href="/GuiArtec/infoLG/index.html">¿Quienes Somos?</a></li>
+            </ul>           
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<!--Aca estan los form y las tablas -->
+  <br>
+  <br>
+  <div class="col-md-12 text-center"><h1 class="josefin titulo" style="color:#E3CBAC">Búsqueda</h1></div><!--unificar con piel main css-->
+  
+  <div class="container text-center lato">
+    <!--Busqueda General por todas las Categorias-->  
+      <form role="form espacio-conten">
+        <div class="col-xs-6 inline-block">
+            <label class="gris chica" for="searchTerm">Buscador GLOBAL</label>
+            <input class="form-control" id="searchTerm" type="text input-lg" onkeyup="doSearch0()" style="color:#B45F04"/>
+        </div>
+      </form>
+    <!--Busqueda de Punto de Interes-->
+    <div class="espacio-conten">
+      <form class="form-group" role="form">
+        <div class="col-xs-4 inline-block">
+          <label class="gris chica" for="searchMuseum">Museos</label>
+          <button type="button" class="btn btn-circle-sm btn-primary" data-toggle="collapse" data-target="#lista1"><span class="glyphicon glyphicon-sort-by-attributes"></span></button>
+        </div>
+      </form>    
+      <!-- Lista de Museos -->
+      <div id="lista1" class="collapse"> 
+          <p>
+            <table id="museums" class="table table-bordered table-hover table-condensed conten-list">
+              <th class="text-center lato chica">id</th><th class="text-center lato chica">Nombre</th><th class="text-center lato chica">Direccion</th><th class="text-center">Ir a Mapa</th>
+              </tr>
+              {{for cam in registros:}}
+              <tr class="josefin chica">
+                <td>{{=cam.id}}</td><td>{{=cam.name}}</td><td>{{=cam.direccion}}</td><td>
+
+            
+                 <form action="{{=URL('senderoMuseos','buscar')}}" method="post">
+                <input type="hidden" name="lng" value="{{=cam.lng}}">
+                <input type="hidden" name="lat" value="{{=cam.lat}}">
+                <button class="btn btn-xs btn-success" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+              </form>
+                </td>
+              </tr>
+              {{pass}}              
+            </table>
+          </p>
+        </div>
+    </div>
+    <!--Busqueda de Punto de Interes-->
+       
+        <form class="form-group espacio-conten" role="form">
+            <div class="col-xs-4 inline-block">
+              <label class="gris" for="searchPoint">Lugares de Interes</label>              
+              <button type="button" class="btn btn-circle-sm btn-primary" data-toggle="collapse" data-target="#lista2"><span class="glyphicon glyphicon-sort-by-attributes"></span></button>
+            </div>
+        </form>
+        <!--Este boton tambien hay que alargar-->
+          <div id="lista2" class="collapse">    
+
+              <table id="points" class="table table-bordered table-hover table-condensed conten-list">
+                <th class="text-center lato chica">id</th><th class="text-center lato chica">Nombre</th><th class="text-center lato chica">Direccion</th><th class="text-center">Ir a Mapa</th>
+                </tr>
+                {{for punto in puntos:}}
+                <tr class="josefin chica">
+                  <td>{{=punto.id}}</td><td>{{=punto.nombre}}</td><td>{{=punto.direccion}}</td><td>
+                       <form action="{{=URL('senderoPuntos','buscar')}}" method="post">
+                        <input type="hidden" name="lng" value="{{=punto.lng}}">
+                        <input type="hidden" name="lat" value="{{=punto.lat}}">
+                        <button class="btn btn-xs btn-success" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                      </form>
+                  </td>
+
+                  </td>
+                </tr>
+                {{pass}}
+                
+              </table>
+          </div>
+     
+  </div>
+
+<footer id="botones-para-compartir">
+  <center>
+    <br>
+    <p class="muted text-center monserrat" style="font-style:italic">Compartí en tus redes Sociales</p>  
+       <a href="javascript:void(0);" onclick="window.open(&quot;http://www.facebook.com/sharer.php?u=http://159.203.5.192/GuiArtec/busqueda/index.html&quot;,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en Facebook"><img alt="compartir en facebook" class="facebooko" height="40" src="/GuiArtec/static/imgs/icons/ico2_Facebook.png" title="compartir en facebook" width="40" /></a>
+      <a href="javascript:void(0);" onclick="window.open(&quot;https://plus.google.com/share?url=http://159.203.5.192/GuiArtec/busqueda/index.html&quot;,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en Google+"><img alt="compartir en google+" class="googleo" height="40" src="/GuiArtec/static/imgs/icons/ico_Google_Plus2.png" title="compartir en google+" width="40" /></a>
+      <a href="javascript:void(0);" onclick="window.open(&quot;http://twitter.com/home?status=http://159.203.5.192/GuiArtec/busqueda/index.html&quot;,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en Twitter"><img alt="compartir en twitter" class="twittero" height="40" src="/GuiArtec/static/imgs/icons/ico2_Twitter.png" title="compartir en twitter" width="40" /></a>
+      <a href="javascript:void(0);" onclick="window.open(&quot;https://www.linkedin.com/shareArticle?mini=http://159.203.5.192/GuiArtec/busqueda/index.html&quot;,&quot;gplusshare&quot;,&quot;toolbar=0,status=0,width=548,height=325&quot;);" rel="nofollow" title="Compartir en Google+"><img alt="compartir en likedin" class="likedino" height="40" src="http://4.bp.blogspot.com/-WBa3E0lZI-8/ViFsOraP3DI/AAAAAAAABwg/eWD_6bYykMQ/s1600/linkedin-long.png" title="compartir en likedin" width="40" /></a>
+  </center>
+</footer>
+
+<!-- Jquery del Sticky Flotante-->
+<script src="{{=URL('static','js/float-sticky.js')}}"></script>
+
+</body>
+</html>
